@@ -1,9 +1,8 @@
 * {
   margin: 0%;
   padding: 0%;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   box-sizing: border-box;
+  font-family: montserrat;
 }
 
 html,
@@ -15,6 +14,12 @@ body {
 #main {
   position: relative;
   overflow: hidden;
+}
+
+#page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
 canvas {
@@ -36,8 +41,9 @@ canvas {
   border-radius: 20px;
   height: 10vh;
   width: 30vw;
-  background-color: #f3f1ef;
-  padding: 0 20px;
+  background-color: #ffffff54;
+  backdrop-filter: blur(10px);
+  padding: 0px 5px;
 }
 
 #nav > img {
@@ -45,17 +51,17 @@ canvas {
 }
 
 #nav > button {
-  padding: 20px 10px;
+  padding: 15px 10px;
   border-radius: 10px;
   border: none;
-  background-color: #ffd687;
+  background-color: #ffcd6d;
   font-weight: 600;
 }
 
-#nav > a {
+#center-nav > a {
   text-decoration: none;
-  color: black;
-  font-size: 16px;
+  color: #000;
+  font-size: 0.8rem;
 }
 
 #page > h1 {
@@ -64,46 +70,39 @@ canvas {
   z-index: 99;
   text-align: center;
   top: 38%;
-  left: 50%;
   font-weight: 500;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
 #page > h4 {
   font-size: 30px;
-  z-index: 99;
   position: absolute;
-  top: 60%;
   text-align: center;
+  top: 60%;
   font-weight: 400;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #191e1f;
-}
-
-#page {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  background-color: #e4e0dd;
+  z-index: 99;
+  color: #565656;
 }
 
 #page1 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: #e4e0dd;
+  background-color: #e5e1dc;
 }
 
 #page1 > h1 {
+  z-index: 99;
   position: absolute;
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
+  text-align: center;
   font-size: 80px;
   font-weight: 500;
-  text-align: center;
-  z-index: 99;
 }
 
 #page1 > h4 {
@@ -111,15 +110,17 @@ canvas {
   left: 50%;
   top: 57%;
   transform: translate(-50%, -50%);
-  font-size: 25px;
-  font-weight: 400;
   text-align: center;
+  font-size: 35px;
+  font-weight: 400;
   white-space: nowrap;
+  color: #565656;
   z-index: 99;
 }
 
 #page2 {
   position: relative;
+  /* z-index: 9; */
   height: 100vh;
   width: 100vw;
   background-color: transparent;
@@ -144,109 +145,101 @@ canvas {
   width: 100vw;
   background-color: transparent;
   text-align: center;
+  background-color: #e4e0dd;
 }
 
 #page4 > h1 {
   font-weight: 600;
-  font-size: 4vw;
+  font-size: 2.7vw;
 }
 
 #page4 > h4 {
   margin-top: 20px;
   font-weight: 500;
-  color: black;
-  font-size: 1.5vw;
+  color: #646464;
+  font-size: 1vw;
 }
 
 #page5 {
   position: relative;
   height: 100vh;
   width: 100vw;
-  background-color: white;
+  background-color: #fff;
 }
-
 #center-page5 {
   display: flex;
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #f6f3ef;
   height: 70%;
   width: 75%;
+  background-color: #f6f3ef;
 }
-
 #left-page5 {
   height: 100%;
   width: 50%;
 }
-
 #left-page5 > svg {
   scale: 0.7;
 }
-
 #right-page5 {
+  display: flex;
+  align-items: start;
+  gap: 30px;
+  justify-content: center;
+  flex-direction: column;
   height: 100%;
   width: 50%;
-  gap: 30px;
-  flex-direction: column;
-  display: flex;
   padding-left: 60px;
-  align-items: start;
-  justify-content: center;
 }
-
 #right-page5 > h1 {
   font-weight: 600;
 }
-
 #right-page5 > h4 {
   font-weight: 500;
   width: 70%;
+  color: #96969685;
 }
-
 #right-page5 > button {
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
-  background-color: black;
-  color: white;
+  background-color: #000;
+  color: #fff;
 }
-
 #page6 {
+  position: relative;
   display: flex;
   height: 100vh;
   width: 100vw;
 }
-
-#left-page6 {
-  height: 100vh;
-  width: 50vw;
+.left-page6 {
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
+  width: 50%;
   padding-left: 10vw;
 }
-
-#left-page6 > h1 {
+.left-page6 > h1 {
   font-size: 2.8vw;
   font-weight: 600;
 }
-
-#left-page6 > h4 {
+.left-page6 > h4 {
+  margin-top: 20px;
   font-size: 20px;
-  font-weight: 300;
-  width: 60%;
+  font-weight: 500;
+  width: 50%;
 }
-
-#right-page6 {
+.right-page6 {
   position: relative;
-  height: 100vh;
-  width: 50vw;
+  height: 100%;
+  width: 50%;
 }
-
-#right-page6 > video {
+.right-page6 > video {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -254,82 +247,37 @@ canvas {
   height: 70%;
   width: 70%;
 }
-
 #page7 {
-  display: flex;
-  height: 100vh;
-  width: 100vw;
-}
-
-#left-page7 {
-  height: 100vh;
-  width: 50vw;
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  flex-direction: column;
-  padding-left: 10vw;
-}
-
-#left-page7 > h1 {
-  font-size: 2.8vw;
-  font-weight: 600;
-}
-
-#left-page7 > h4 {
-  font-size: 19px;
-  font-weight: 300;
-  width: 60%;
-}
-
-#right-page7 {
   position: relative;
-  height: 100vh;
-  width: 50vw;
-}
-
-#right-page7 > video {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 70%;
-  width: 70%;
-}
-#page6 {
   display: flex;
   height: 100vh;
   width: 100vw;
 }
-
-#left-page6 {
-  height: 100vh;
-  width: 50vw;
+.left-page7 {
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
+  width: 50%;
   padding-left: 10vw;
 }
-
-#left-page6 > h1 {
+.left-page7 > h1 {
   font-size: 2.8vw;
   font-weight: 600;
 }
-
-#left-page6 > h4 {
+.left-page7 > h4 {
+  margin-top: 20px;
   font-size: 20px;
-  font-weight: 300;
-  width: 60%;
+  font-weight: 500;
+  width: 50%;
 }
-
-#right-page6 {
+.right-page7 {
   position: relative;
-  height: 100vh;
-  width: 50vw;
+  height: 100%;
+  width: 50%;
 }
-
-#right-page6 > video {
+.right-page7 > video {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -337,41 +285,37 @@ canvas {
   height: 70%;
   width: 70%;
 }
-
 #page8 {
+  position: relative;
   display: flex;
   height: 100vh;
   width: 100vw;
 }
-
-#left-page8 {
-  height: 100vh;
-  width: 50vw;
+.left-page8 {
   display: flex;
   align-items: start;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
+  width: 50%;
   padding-left: 10vw;
 }
-
-#left-page8 > h1 {
+.left-page8 > h1 {
   font-size: 2.8vw;
   font-weight: 600;
 }
-
-#left-page8 > h4 {
-  font-size: 19px;
-  font-weight: 300;
-  width: 60%;
+.left-page8 > h4 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  width: 50%;
 }
-
-#right-page8 {
+.right-page8 {
   position: relative;
-  height: 100vh;
-  width: 50vw;
+  height: 100%;
+  width: 50%;
 }
-
-#right-page8 > img {
+.right-page8 > img {
   position: absolute;
   left: 50%;
   top: 50%;
